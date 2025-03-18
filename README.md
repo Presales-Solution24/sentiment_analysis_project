@@ -22,12 +22,6 @@ Proyek ini bertujuan untuk membangun **model analisis sentimen berbasis IndoBERT
 
 ## 🚀 Cara Instalasi & Menjalankan Proyek
 
-### 1️⃣ **Clone Repository**
-```bash
-git clone https://github.com/username/epson-sentiment-analysis.git
-cd epson-sentiment-analysis
-```
-
 ### 2️⃣ **Buat Virtual Environment**
 ```bash
 python -m venv venv
