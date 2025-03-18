@@ -4,3 +4,5 @@ datasets
 pandas
 scikit-learn
 streamlit
+accelerate
+openpyxl

@@ -1,7 +1,8 @@
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 # Gunakan IndoBERT Base (bukan Sentiment)
-MODEL_NAME = "indobenchmark/indobert-base-p1"
+# MODEL_NAME = "indobenchmark/indobert-base-p1"
+MODEL_NAME = "crypter70/IndoBERT-Sentiment-Analysis"
 MODEL_PATH = "models/sentiment_model"
 
 def download_model():
@@ -16,7 +17,7 @@ def download_model():
     model.save_pretrained(MODEL_PATH)
     tokenizer.save_pretrained(MODEL_PATH)
 
-    print(f"✅ Model IndoBERT Base berhasil diunduh dan disimpan di '{MODEL_PATH}'")
+    print(f"✅ Model berhasil diunduh dan disimpan di '{MODEL_PATH}'")
 
 if __name__ == "__main__":
     download_model()

@@ -8,7 +8,7 @@ from utils.config import MODEL_PATH, DATASET_PATH
 df = pd.read_csv(DATASET_PATH)
 
 # Hapus baris dengan nilai kosong pada kolom "review" atau "sentiment"
-df.dropna(subset=["review", "sentiment"], inplace=True)
+# df.dropna(subset=["review", "sentiment"], inplace=True)
 
 # Pastikan dataset memiliki kolom 'labels'
 df.rename(columns={"sentiment": "labels"}, inplace=True)
@@ -28,7 +28,8 @@ if df.isnull().values.any():
 dataset = Dataset.from_pandas(df)
 
 # Load tokenizer IndoBERT Base
-model_name = "indobenchmark/indobert-base-p1"
+# model_name = "indobenchmark/indobert-base-p1"
+model_name = "crypter70/IndoBERT-Sentiment-Analysis"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 # Tokenisasi dataset
