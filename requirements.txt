@@ -6,3 +6,8 @@ scikit-learn
 streamlit
 accelerate
 openpyxl
+matplotlib
+seaborn
+xlsxwriter
+plotly
+wordcloud

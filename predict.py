@@ -52,10 +52,11 @@ def predict_sentiment(text, debug=False):
         print(f"   ➡ Positif: {probs[0][2]:.2f}")
 
     # Format hasil dengan deteksi produk jika ditemukan
-    sentiment_result = f"{labels[prediction]} (Confidence: {probs[0][prediction]:.2f})"
+    # sentiment_result = f"{labels[prediction]} (Confidence: {probs[0][prediction]:.2f})"
+    sentiment_result = f"{labels[prediction]}"
     
-    if detected_product:
-        sentiment_result += f" | Produk Epson: {detected_product}"
+    # if detected_product:
+    #     sentiment_result += f" | Produk Epson: {detected_product}"
 
     return sentiment_result
 
