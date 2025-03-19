@@ -64,15 +64,4 @@ streamlit run app.py --server.fileWatcherType=none
 - **Pandas**
 - **Streamlit**
 
-## 📄 Lisensi
-Proyek ini berada di bawah lisensi **MIT**. Silakan gunakan, modifikasi, dan distribusikan dengan bebas!
-
-## 🤝 Kontribusi
-Jika ingin berkontribusi:
-1. **Fork repository ini**
-2. **Buat branch baru (`git checkout -b feature-nama`)**
-3. **Commit perubahan (`git commit -m 'Menambahkan fitur X'`)**
-4. **Push ke GitHub (`git push origin feature-nama`)**
-5. **Buat Pull Request**
-
 🚀 **Selamat Mengembangkan Model Sentimen Epson-Minded!** 🚀
