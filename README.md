@@ -44,6 +44,12 @@ python train.py
 streamlit run app.py
 ```
 
+### 5️⃣ **Jalankan Aplikasi Streamlit No watcher**
+```bash
+streamlit run app.py --server.fileWatcherType=none
+```
+
+
 ## 🔍 Fitur Utama
 ✅ **Fine-Tuned IndoBERT Model** → Model telah dilatih ulang agar lebih "Epson-Minded"
 ✅ **Deteksi Kompetitor** → Model dapat mengenali apakah Epson dibandingkan dengan merek lain
