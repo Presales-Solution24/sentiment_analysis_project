@@ -22,6 +22,12 @@ Proyek ini bertujuan untuk membangun **model analisis sentimen berbasis IndoBERT
 
 ## 🚀 Cara Instalasi & Menjalankan Proyek
 
+### 1️⃣ **Clone Repository**
+```bash
+git clone https://github.com/username/repository_name.git
+cd repository_name
+```
+
 ### 2️⃣ **Buat Virtual Environment**
 ```bash
 python -m venv venv
@@ -44,11 +50,10 @@ python train.py
 streamlit run app.py
 ```
 
-### 5️⃣ **Jalankan Aplikasi Streamlit No watcher**
+### 6️⃣ **Jalankan Aplikasi Streamlit Tanpa Watcher**
 ```bash
 streamlit run app.py --server.fileWatcherType=none
 ```
-
 
 ## 🔍 Fitur Utama
 ✅ **Fine-Tuned IndoBERT Model** → Model telah dilatih ulang agar lebih "Epson-Minded"
@@ -56,6 +61,8 @@ streamlit run app.py --server.fileWatcherType=none
 ✅ **Prediksi Sentimen** → Klasifikasi ulasan menjadi **Positif, Netral, atau Negatif**
 ✅ **Input Manual & File Upload** → Analisis ulasan secara langsung atau melalui file **Excel**
 ✅ **Export Hasil Analisis** → Simpan hasil dalam format **CSV**
+✅ **Visualisasi Data** → Pie Chart, Bar Chart, dan Word Cloud untuk analisis kata
+✅ **Dukungan GPU** → Memanfaatkan akselerasi CUDA jika tersedia
 
 ## 🏗 Teknologi yang Digunakan
 - **Python 3.8+**
@@ -63,5 +70,26 @@ streamlit run app.py --server.fileWatcherType=none
 - **PyTorch**
 - **Pandas**
 - **Streamlit**
+- **Matplotlib & Seaborn** untuk visualisasi
+- **WordCloud** untuk analisis kata yang sering muncul
+
+## 📦 Dependensi yang Digunakan
+```plaintext
+torch
+transformers
+datasets
+pandas
+scikit-learn
+streamlit
+accelerate
+openpyxl
+matplotlib
+seaborn
+xlsxwriter
+plotly
+wordcloud
+```
 
 🚀 **Selamat Mengembangkan Model Sentimen Epson-Minded!** 🚀
+# 🚀 DWTD 🚀 # 
+
