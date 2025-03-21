@@ -71,30 +71,13 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 model.to(device)
 
 ## Base Configuration
-# training_args = TrainingArguments(
-#     output_dir=MODEL_PATH,
-#     eval_strategy="epoch",  # Evaluasi dilakukan setiap epoch
-#     save_strategy="epoch",  # Simpan model setiap epoch agar cocok dengan eval_strategy
-#     per_device_train_batch_size=8,
-#     per_device_eval_batch_size=8,
-#     num_train_epochs=3,
-#     save_total_limit=2,
-#     logging_dir="logs",
-#     logging_steps=100,
-#     learning_rate=2e-5,
-#     warmup_steps=500,
-#     weight_decay=0.01,
-#     load_best_model_at_end=True,
-# )
-
-# Konfigurasi training (DISESUAIKAN UNTUK RTX 4060 - 8GB VRAM)
 training_args = TrainingArguments(
     output_dir=MODEL_PATH,
     eval_strategy="epoch",  # Evaluasi dilakukan setiap epoch
     save_strategy="epoch",  # Simpan model setiap epoch agar cocok dengan eval_strategy
-    per_device_train_batch_size=16,  # Meningkatkan batch size (GPU 8GB cukup untuk 16)
-    per_device_eval_batch_size=16,
-    num_train_epochs=5,  # Naikkan jumlah epoch untuk hasil lebih stabil
+    per_device_train_batch_size=8,
+    per_device_eval_batch_size=8,
+    num_train_epochs=3,
     save_total_limit=2,
     logging_dir="logs",
     logging_steps=100,
@@ -102,9 +85,26 @@ training_args = TrainingArguments(
     warmup_steps=500,
     weight_decay=0.01,
     load_best_model_at_end=True,
-    fp16=True,  # Mixed Precision Training untuk mempercepat proses
-    gradient_accumulation_steps=1,  # Tidak perlu akumulasi karena VRAM cukup besar
 )
+
+# Konfigurasi training (DISESUAIKAN UNTUK RTX 4060 - 8GB VRAM)
+# training_args = TrainingArguments(
+#     output_dir=MODEL_PATH,
+#     eval_strategy="epoch",  # Evaluasi dilakukan setiap epoch
+#     save_strategy="epoch",  # Simpan model setiap epoch agar cocok dengan eval_strategy
+#     per_device_train_batch_size=16,  # Meningkatkan batch size (GPU 8GB cukup untuk 16)
+#     per_device_eval_batch_size=16,
+#     num_train_epochs=5,  # Naikkan jumlah epoch untuk hasil lebih stabil
+#     save_total_limit=2,
+#     logging_dir="logs",
+#     logging_steps=100,
+#     learning_rate=2e-5,
+#     warmup_steps=500,
+#     weight_decay=0.01,
+#     load_best_model_at_end=True,
+#     fp16=True,  # Mixed Precision Training untuk mempercepat proses
+#     gradient_accumulation_steps=1,  # Tidak perlu akumulasi karena VRAM cukup besar
+# )
 
 trainer = Trainer(
     model=model,

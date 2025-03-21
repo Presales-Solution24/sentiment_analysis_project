@@ -5,7 +5,7 @@ import seaborn as sns
 import io  # Untuk menyimpan file sementara di memori
 from predict import predict_sentiment
 
-st.title("📊 Sentiment Analysis Epson Printer")
+st.title("📊 Customer Review Analysis Tools")
 
 # Opsi input: Manual atau Upload File
 option = st.radio("Pilih metode input:", ("Input Manual", "Upload File Excel"))
