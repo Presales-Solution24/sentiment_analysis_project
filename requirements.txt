@@ -11,3 +11,6 @@ seaborn
 xlsxwriter
 plotly
 wordcloud
+transformers
+tiktoken
+sentencepiece

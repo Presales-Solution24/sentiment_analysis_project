@@ -1,13 +1,18 @@
-def classify_category(review):
-    review = review.lower()
+from utils.category_zero_shot import classify_category_zero_shot
 
-    if any(word in review for word in ["mahal", "murah", "harga", "terjangkau", "biaya"]):
-        return "Harga"
-    elif any(word in review for word in ["layanan", "servis", "pelayanan", "garansi", "cs", "service center"]):
-        return "Layanan"
-    elif any(word in review for word in ["kualitas", "ketahanan", "hasil cetak", "tajam", "warna", "awet", "rusak", "cacat"]):
-        return "Kualitas Produk"
-    elif any(word in review for word in ["fitur", "wifi", "scanner", "auto duplex", "spesifikasi", "fungsi", "multi fungsi", "auto", "smart", "print via"]):
-        return "Fitur Produk"
-    else:
-        return "Lainnya"
+def classify_category(review):
+    return classify_category_zero_shot(review)
+
+# def classify_category(review):
+#     review = review.lower()
+
+#     if any(word in review for word in ["mahal", "murah", "harga", "terjangkau", "biaya"]):
+#         return "Harga"
+#     elif any(word in review for word in ["layanan", "servis", "pelayanan", "garansi", "cs", "service center"]):
+#         return "Layanan"
+#     elif any(word in review for word in ["kualitas", "ketahanan", "hasil cetak", "tajam", "warna", "awet", "rusak", "cacat"]):
+#         return "Kualitas Produk"
+#     elif any(word in review for word in ["fitur", "wifi", "scanner", "auto duplex", "spesifikasi", "fungsi", "multi fungsi", "auto", "smart", "print via"]):
+#         return "Fitur Produk"
+#     else:
+#         return "Lainnya"
