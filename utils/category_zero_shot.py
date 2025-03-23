@@ -28,7 +28,8 @@ LABEL_MAPPING = {
 def load_zero_shot_classifier():
     return pipeline(
         task="zero-shot-classification",
-        model="joeddav/xlm-roberta-large-xnli"
+        model="models/category_model/xlm-roberta-xnli",
+        tokenizer="models/category_model/xlm-roberta-xnli"
     )
 
 # Inisialisasi pipeline
